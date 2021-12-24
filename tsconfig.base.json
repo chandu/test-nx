@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@test-nx/model": ["libs/model/src/index.ts"],
+      "@test-nx/shared-ui": ["libs/shared-ui/src/index.ts"],
+      "@test-nx/storybook": ["libs/storybook/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

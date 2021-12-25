@@ -1,15 +1,10 @@
-import styles from './index.module.css';
-import {SharedUi} from "@test-nx/shared-ui";
+import {Button} from "@test-nx/shared-ui";
 
 export function Index() {
-  /*
-   * Replace the elements below with your own.
-   *
-   * Note: The corresponding styles are in the ./index.css file.
-   */
   return (
-    <div>
-      <SharedUi />
+    <div className="max-w-screen-lg mx-auto">
+      <h1 className="text-primary font-extrabold">Hello</h1>
+      <Button label={"I am a useless button"} />
     </div>
   );
 }

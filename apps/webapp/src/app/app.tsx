@@ -1,7 +1,7 @@
 import {Todo} from "@test-nx/model";
-import {useEffect, useState} from "react";
-import {SharedUi} from "@test-nx/shared-ui";
-
+import {useState} from "react";
+import {Button} from "@test-nx/shared-ui";
+import "../styles.css";
 
 
 export function App() {
@@ -19,15 +19,20 @@ export function App() {
     } catch (e) {
       console.error(e)
     }
+    console.log(todos);
   }
   return (
     <>
-      <SharedUi  label="Welcome to shared components!s"/>
-      <button onClick={() => fetchTodos()}>Fetch Todos</button>
-      {
-      todos.map((todo) => <div>{todo.name}</div>)
-      }
+      <div className="max-w-screen-lg mx-auto">
+        <Button label="Fetch Todos" onClick={fetchTodos}></Button>
+        <div className="flex flex-col items-start py-8">
+          {
+            todos.map((todo) => <div className="bg-yellow-200 px-4 py-2">{todo.name}</div>)
+          }
+        </div>
+      </div>
     </>
+
   );
 }
 

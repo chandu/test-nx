@@ -5,7 +5,6 @@
     "model": "libs/model",
     "shared-ui": "libs/shared-ui",
     "shared-ui-e2e": "apps/shared-ui-e2e",
-    "storybook": "libs/storybook",
     "webapp": "apps/webapp",
     "webapp-e2e": "apps/webapp-e2e",
     "website": "apps/website",

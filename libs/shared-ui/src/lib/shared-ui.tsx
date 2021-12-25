@@ -1,12 +1,11 @@
-import './shared-ui.module.css';
-
-/* eslint-disable-next-line */
-export interface SharedUiProps {}
+export interface SharedUiProps {
+  label: string;
+}
 
 export function SharedUi(props: SharedUiProps) {
   return (
-    <div className="text-gray-100 text-sm">
-      <h1>Welcome to Shared Components my Friend!</h1>
+    <div>
+      <h1 className="p-4 text-gray-50 text-sm bg-blue-400">{props.label}</h1>
     </div>
   );
 }

@@ -10,7 +10,6 @@ export function App() {
 
   const fetchTodos = () => {
     console.error('Fetching Todos');
-
     try {
       fetch('/api/todos')
         .then((_) => {
@@ -21,12 +20,9 @@ export function App() {
       console.error(e)
     }
   }
-
-  console.log(todos);
-
   return (
     <>
-      <SharedUi />
+      <SharedUi  label="Welcome to shared components!s"/>
       <button onClick={() => fetchTodos()}>Fetch Todos</button>
       {
       todos.map((todo) => <div>{todo.name}</div>)
